@@ -3,6 +3,8 @@ package ch.noseryoung.app;
 import ch.noseryoung.exceptions.IllegalTriangleSideException;
 import ch.noseryoung.exceptions.TriangleException;
 
+import java.time.LocalDate;
+
 // import the exceptions
 
 public class TriangleApp {
@@ -29,7 +31,8 @@ public class TriangleApp {
    * @param handler of type String to print in the application header
    */
   public TriangleApp(String company, String handler) {
-	// persist company and handler
+	this.company = company;
+    this.handler = handler;
 	// with initialisation programm is running.
   }
 
@@ -60,7 +63,12 @@ public class TriangleApp {
    * This method prints the application header.
    */
   private void printHeader() {
-    // create header with handler, company and current year
+    System.out.println("******************************");
+    System.out.println("      TRIANGLE EVALUATOR      ");
+    System.out.println("******************************");
+    System.out.println("COMPANY: " + this.company + ", " + LocalDate.now().getYear());
+    System.out.println("HANDLER: " + this.handler);
+    System.out.println("******************************");
   }
 
   /**
@@ -76,7 +84,7 @@ public class TriangleApp {
    * @param side of type String to display as title for the prompt.
    */
   private void promptSide(String side) {
-    // todo
+
   }
 
   /**
